@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                app.initialize();
+
+                /*var bg = "url('img/bg" + (Math.floor(Math.random() * 3) + 1) + ".jpg')";
+                $("body").css("background-image", bg);*/
+
+                $.get("https://mis.exe-coll.ac.uk/php/apps/staff/is_loggedin.htm", function(data) {
+
+                    if( data == "1")
+                    {
+                        window.location = "https://mis.EXE-COLL.AC.UK/mis2/h_noheader_bl.php?m=8,28,173,173,1101&p=kpi_launch_new&";
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body style="background-image: url('img/bg2.jpg'); background-color:#0066CC background-repeat:no-repeat;">
+    
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Enrolment Dashboard</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <a href="https://mis.EXE-COLL.AC.UK/mis2/h_noheader_bl.php?m=8,28,173,173,1101&p=kpi_launch_new&" style="position:fixed; left: 15%; width:70%; bottom:8%; padding: .5em; font-size: 2.5em; display:block; background-color:#0066CC; text-align:center; color: #FFFFFF; text-decoration:none;" id="login_link"> Login </a>
+
+    <a href="https://mis.EXE-COLL.AC.UK/mis2/h_noheader_bl.php?m=8,28,173,173,1101&p=kpi_launch_new&" style="position:fixed; left: 15%; width:70%; bottom:1%; padding: .5em; font-size: 1em;text-align:center; color: #DDDDDD; text-decoration:none; background-color: #DDDDDD; color:#444444"> &copy; 2014 Exeter College </a>
+
+    </body>
+</html>
